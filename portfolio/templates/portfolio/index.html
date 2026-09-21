@@ -92,6 +92,9 @@
     <script>
         function sendEmail(e) {
             e.preventDefault();
+            const btn = document.querySelector('.btn-submit');
+            const originalText = btn.innerText;
+            
             const name = document.querySelector('input[name="name"]').value;
             const email = document.querySelector('input[name="email"]').value;
             const message = document.querySelector('textarea[name="message"]').value;
@@ -100,6 +103,21 @@
             const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
             
             window.location.href = 'mailto:gemechusosna@gmail.com?subject=' + subject + '&body=' + body;
+            
+            // Visual feedback
+            btn.innerText = 'Sent!';
+            btn.style.backgroundColor = '#10B981'; // solid green
+            btn.style.color = 'white';
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+            
+            // Revert button after 3 seconds
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.backgroundColor = '';
+                btn.style.color = '';
+            }, 3000);
         }
     </script>
 </body>
