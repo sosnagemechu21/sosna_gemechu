@@ -3,28 +3,28 @@ from django.shortcuts import render
 def home(request):
     projects = [
         {
-            'name': 'Web2gram',
+            'name': 'Web2Gram',
             'url': 'https://web2gram.pro.et/',
-            'description': 'A modern web application demonstrating strong frontend and backend integration.',
+            'description': 'Telegram × AI information filtering',
             'image': 'https://image.thum.io/get/width/1200/crop/800/https://web2gram.pro.et/'
         },
         {
-            'name': 'Medstar Internal Speciality Clinic',
+            'name': 'FocusLoop',
+            'url': '#',
+            'description': 'digital wellness / distraction control',
+            'image': 'https://image.thum.io/get/width/1200/crop/800/https://example.com'
+        },
+        {
+            'name': 'Libria',
+            'url': '#',
+            'description': 'AI-powered study companion',
+            'image': 'https://image.thum.io/get/width/1200/crop/800/https://example.com'
+        },
+        {
+            'name': 'Medstar',
             'url': 'https://medstarinternalspecialityclinic.vercel.app/en',
-            'description': 'A professional clinic website with clean UI, responsive design, and robust functionality.',
+            'description': 'healthcare web platform',
             'image': 'https://image.thum.io/get/width/1200/crop/800/https://medstarinternalspecialityclinic.vercel.app/en'
-        },
-        {
-            'name': 'Addisverse',
-            'url': 'https://addisverse.pro.et/',
-            'description': 'An innovative platform showing advanced web development capabilities.',
-            'image': 'https://image.thum.io/get/width/1200/crop/800/https://addisverse.pro.et/'
-        },
-        {
-            'name': 'Gara Media',
-            'url': 'https://gara-media.vercel.app/',
-            'description': 'A modern media application built with a focus on seamless user experience.',
-            'image': 'https://image.thum.io/get/width/1200/crop/800/https://gara-media.vercel.app/'
         }
     ]
     
