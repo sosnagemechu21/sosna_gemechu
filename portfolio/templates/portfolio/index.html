@@ -28,9 +28,9 @@
         <section class="hero" id="about">
             <h1 class="hero-title">Hi, i'm sosna</h1>
             <div class="hero-blobs">
-                <div class="hero-blob blob-purple"></div>
-                <div class="hero-blob blob-blue"></div>
-                <div class="hero-blob blob-orange"></div>
+                <div class="hero-blob blob-green1"></div>
+                <div class="hero-blob blob-green2"></div>
+                <div class="hero-blob blob-green3"></div>
             </div>
             <div class="hero-bottom-text">
                 <p>a computer science student, developer, and prompt engineer.</p>
@@ -70,9 +70,22 @@
 
         <section class="contact-section" id="contact">
             <h2>Let's build together.</h2>
-            <p>Connect with me for projects and collaborations.</p>
-            <div class="contact-links">
-                <a href="mailto:gemechusosna@gmail.com" class="btn-contact">Email Me</a>
+            <p>Fill out the form below and it will be sent directly to my email.</p>
+            
+            <form action="https://formsubmit.co/gemechusosna@gmail.com" method="POST" class="contact-form">
+                <!-- Disable Captcha for smoother UX -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Portfolio Contact!">
+                
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <textarea name="message" rows="5" placeholder="What would you like to address me for?" required></textarea>
+                <button type="submit" class="btn-hero btn-submit">Send Message</button>
+            </form>
+
+            <div class="contact-links" style="margin-top: 3rem;">
                 <a href="https://www.linkedin.com/in/sosna-gemechu-460606332" target="_blank" class="btn-contact outline">LinkedIn</a>
                 <a href="https://github.com/sosnagemechu21" target="_blank" class="btn-contact outline">GitHub</a>
             </div>
