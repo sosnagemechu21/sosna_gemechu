@@ -16,6 +16,11 @@ def home(request):
             'name': 'Addisverse',
             'url': 'https://addisverse.pro.et/',
             'description': 'An innovative platform showing advanced web development capabilities.'
+        },
+        {
+            'name': 'Gara Media',
+            'url': 'https://gara-media.vercel.app/',
+            'description': 'A modern media application built with a focus on seamless user experience.'
         }
     ]
     
