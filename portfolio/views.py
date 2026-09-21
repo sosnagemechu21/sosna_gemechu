@@ -10,21 +10,21 @@ def home(request):
         },
         {
             'name': 'FocusLoop',
-            'url': '#',
+            'url': 'https://addisverse.pro.et/',
             'description': 'digital wellness / distraction control',
-            'image': 'https://picsum.photos/seed/focusloop/1200/800'
-        },
-        {
-            'name': 'Libria',
-            'url': '#',
-            'description': 'AI-powered study companion',
-            'image': 'https://picsum.photos/seed/libria/1200/800'
+            'image': 'https://image.thum.io/get/width/1200/crop/800/https://addisverse.pro.et/'
         },
         {
             'name': 'Medstar',
             'url': 'https://medstarinternalspecialityclinic.vercel.app/en',
             'description': 'healthcare web platform',
             'image': 'https://image.thum.io/get/width/1200/crop/800/https://medstarinternalspecialityclinic.vercel.app/en'
+        },
+        {
+            'name': 'Gara Media',
+            'url': 'https://gara-media.vercel.app/',
+            'description': 'A modern media application built with a focus on seamless user experience',
+            'image': 'https://image.thum.io/get/width/1200/crop/800/https://gara-media.vercel.app/'
         }
     ]
     
