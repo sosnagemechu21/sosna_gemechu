@@ -12,13 +12,13 @@ def home(request):
             'name': 'FocusLoop',
             'url': '#',
             'description': 'digital wellness / distraction control',
-            'image': 'https://image.thum.io/get/width/1200/crop/800/https://example.com'
+            'image': 'https://picsum.photos/seed/focusloop/1200/800'
         },
         {
             'name': 'Libria',
             'url': '#',
             'description': 'AI-powered study companion',
-            'image': 'https://image.thum.io/get/width/1200/crop/800/https://example.com'
+            'image': 'https://picsum.photos/seed/libria/1200/800'
         },
         {
             'name': 'Medstar',
