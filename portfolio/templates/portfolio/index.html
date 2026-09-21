@@ -4,113 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sosna Gemechu | Portfolio</title>
-    <meta name="description" content="Portfolio of Sosna Gemechu - CS Student, Software Developer, Creator, and Prompt Engineer.">
+    <title>Sosna Gemechu — Developer</title>
+    <meta name="description" content="Sosna Gemechu — C++/C#/Python/Django developer, Creator, and Prompt Engineer.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div class="background-animation">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
-
-    <nav class="navbar">
-        <div class="logo">SG.</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact" class="btn-primary">Contact Me</a></li>
-        </ul>
-    </nav>
+<body class="theme-dark">
+    <div class="radial-bg"></div>
+    <div class="radial-overlay"></div>
+    
+    <header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Expertise</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
     <main>
-        <section id="hero" class="hero">
-            <div class="hero-content">
-                <h1>Hi, I'm <span class="highlight">Sosna Gemechu</span></h1>
-                <h2>Computer Science Student & Developer</h2>
-                <p>2nd Year CS Student at Admas University | Addis Ababa, Ethiopia</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn-secondary">View Work</a>
-                    <a href="#contact" class="btn-primary">Get in Touch</a>
-                </div>
+        <section class="hero" id="about">
+            <h1 class="hero-title">Hi, i'm sosna</h1>
+            <div class="hero-blobs">
+                <div class="hero-blob blob-purple"></div>
+                <div class="hero-blob blob-blue"></div>
+                <div class="hero-blob blob-orange"></div>
             </div>
-            <div class="hero-image-container">
-                <div class="hero-image">
-                    <!-- Placeholder or dynamic avatar -->
-                    <div class="avatar">SG</div>
-                </div>
+            <div class="hero-bottom-text">
+                <p>a computer science student, developer, and prompt engineer.</p>
+                <a href="#contact" class="btn-hero">Contact Me</a>
             </div>
         </section>
 
-        <section id="skills" class="skills-section">
-            <div class="section-header">
-                <h2>My <span class="highlight">Skills</span></h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card">C++</div>
-                <div class="skill-card">C#</div>
-                <div class="skill-card">Python</div>
-                <div class="skill-card">Django Developer</div>
-                <div class="skill-card">Creator</div>
-                <div class="skill-card">Social Media Manager</div>
-                <div class="skill-card">Video Editor</div>
-                <div class="skill-card highlight-skill">Prompt Engineering</div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects-section">
-            <div class="section-header">
-                <h2>Featured <span class="highlight">Projects</span></h2>
-            </div>
-            <div class="projects-grid">
+        <section class="projects-scroll" id="projects">
+            <div class="projects-track">
                 {% for project in projects %}
-                <div class="project-card">
-                    <div class="project-content">
+                <a href="{{ project.url }}" target="_blank" class="project-item">
+                    <img src="{{ project.image }}" alt="{{ project.name }}" loading="lazy" class="project-img">
+                    <div class="project-info">
                         <h3>{{ project.name }}</h3>
                         <p>{{ project.description }}</p>
-                        <a href="{{ project.url }}" target="_blank" class="btn-link">View Project &rarr;</a>
                     </div>
-                </div>
+                </a>
                 {% endfor %}
             </div>
         </section>
 
-        <section id="contact" class="contact-section">
-            <div class="section-header">
-                <h2>Let's <span class="highlight">Connect</span></h2>
-                <p>Interested in working together or have a question? Send me a message!</p>
+        <section class="skills-section" id="skills">
+            <h2>Expertise</h2>
+            <div class="skills-list">
+                <span>C++</span>
+                <span>C#</span>
+                <span>Python</span>
+                <span>Django Developer</span>
+                <span>Creator</span>
+                <span>Social Media Manager</span>
+                <span>Video Editor</span>
+                <span class="highlight">Prompt Engineering</span>
             </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>gemechusosna@gmail.com</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fab fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/in/sosna-gemechu-460606332" target="_blank">LinkedIn Profile</a>
-                    </div>
-                    <div class="info-item">
-                        <i class="fab fa-github"></i>
-                        <a href="https://github.com/sosnagemechu21" target="_blank">GitHub Profile</a>
-                    </div>
-                </div>
-                <form action="mailto:gemechusosna@gmail.com" method="post" enctype="text/plain" class="contact-form">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn-primary submit-btn">Send Message</button>
-                </form>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <h2>Let's build together.</h2>
+            <p>Connect with me for projects and collaborations.</p>
+            <div class="contact-links">
+                <a href="mailto:gemechusosna@gmail.com" class="btn-contact">Email Me</a>
+                <a href="https://www.linkedin.com/in/sosna-gemechu-460606332" target="_blank" class="btn-contact outline">LinkedIn</a>
+                <a href="https://github.com/sosnagemechu21" target="_blank" class="btn-contact outline">GitHub</a>
             </div>
         </section>
     </main>
 
-    <footer>
-    </footer>
 </body>
 </html>
